@@ -849,3 +849,88 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (fail
 2022-08-27 16:12:42,294 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 4 hosts
 2022-08-27 16:22:39,609 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 4 hosts
 2022-08-27 16:29:01,816 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 4 hosts
+2022-08-27 18:17:37,732 -  nornir.core -     INFO -        run() - Running task 'pull_show_run' with args {} on 4 hosts
+2022-08-27 18:17:38,371 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-08-27 18:17:38,371 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'pull_show_run' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook5.py", line 8, in pull_show_run
+    task.run(task=send_command, command="show run")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 18:17:38,546 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed
+
+2022-08-27 18:17:38,546 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'pull_show_run' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook5.py", line 8, in pull_show_run
+    task.run(task=send_command, command="show run")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 18:19:44,953 -  nornir.core -     INFO -        run() - Running task 'pull_show_run' with args {} on 4 hosts
+2022-08-27 18:20:38,520 -  nornir.core -     INFO -        run() - Running task 'pull_show_run' with args {} on 4 hosts
