@@ -1,0 +1,851 @@
+2022-08-21 16:21:06,343 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 4 hosts
+2022-08-22 10:21:35,287 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show version'} on 4 hosts
+2022-08-22 10:31:16,564 -  nornir.core -     INFO -        run() - Running task 'send_command' with args {'command': 'show ntp config'} on 4 hosts
+2022-08-22 10:53:21,674 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2022-08-22 10:53:21,680 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 8, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'ntp_server'
+
+2022-08-22 10:53:21,681 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 8, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'ntp_server'
+
+2022-08-22 10:53:21,682 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 8, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'ntp_server'
+
+2022-08-22 10:53:21,682 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'random_config' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 8, in random_config
+    task.run(task=send_config, config=f"ntp server {task.host['ntp_server']}")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 350, in __getitem__
+    return self.data[item]
+KeyError: 'ntp_server'
+
+2022-08-22 11:36:05,727 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2022-08-22 11:37:35,638 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 4 hosts
+2022-08-22 12:26:29,955 -  nornir.core -     INFO -        run() - Running task 'random_config' with args {} on 8 hosts
+2022-08-23 12:17:35,048 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2022-08-23 12:21:31,233 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2022-08-23 18:50:50,970 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2022-08-23 19:07:59,105 -  nornir.core -     INFO -        run() - Running task 'show_command_test' with args {} on 4 hosts
+2022-08-23 19:46:58,075 -  nornir.core -     INFO -        run() - Running task 'send_config_test' with args {} on 4 hosts
+2022-08-23 20:04:56,079 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2022-08-23 20:04:56,084 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook6.py", line 10, in send_configs_test
+    task.run(task=send_config, configs=["router ospf 44", "network 0.0.0.0 255.255.255.255 area 44"])
+NameError: name 'send_config' is not defined
+
+2022-08-23 20:04:56,085 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook6.py", line 10, in send_configs_test
+    task.run(task=send_config, configs=["router ospf 44", "network 0.0.0.0 255.255.255.255 area 44"])
+NameError: name 'send_config' is not defined
+
+2022-08-23 20:04:56,086 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook6.py", line 10, in send_configs_test
+    task.run(task=send_config, configs=["router ospf 44", "network 0.0.0.0 255.255.255.255 area 44"])
+NameError: name 'send_config' is not defined
+
+2022-08-23 20:04:56,086 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook6.py", line 10, in send_configs_test
+    task.run(task=send_config, configs=["router ospf 44", "network 0.0.0.0 255.255.255.255 area 44"])
+NameError: name 'send_config' is not defined
+
+2022-08-23 20:05:23,642 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2022-08-23 20:17:25,890 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2022-08-24 20:35:29,808 -  nornir.core -     INFO -        run() - Running task 'send_configs_test' with args {} on 4 hosts
+2022-08-25 11:09:31,507 -  nornir.core -     INFO -        run() - Running task 'another_show_command_test' with args {} on 4 hosts
+2022-08-25 11:12:21,637 -  nornir.core -     INFO -        run() - Running task 'another_show_command_test' with args {} on 4 hosts
+2022-08-25 15:20:59,153 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 4 hosts
+2022-08-25 15:45:07,752 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 4 hosts
+2022-08-26 17:03:46,562 -  nornir.core -     INFO -        run() - Running task 'another_config_test' with args {} on 4 hosts
+2022-08-26 18:07:48,287 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-26 18:10:04,865 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-26 18:11:00,512 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-26 18:11:58,030 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-26 18:13:58,839 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-26 18:15:51,748 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-27 13:02:26,283 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-27 13:04:24,599 -  nornir.core -     INFO -        run() - Running task 'pull_random_info' with args {} on 4 hosts
+2022-08-27 13:31:05,329 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 13:31:05,333 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99", )
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:05,334 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99", )
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:05,334 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99", )
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:05,334 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99", )
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:17,407 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 13:31:17,409 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99")
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:17,410 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99")
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:17,410 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99")
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:17,411 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task-napalm_ping, dest="99.99.99.99")
+TypeError: unsupported operand type(s) for -: 'Task' and 'function'
+
+2022-08-27 13:31:31,989 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 13:32:41,371 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 13:32:52,657 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R4\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:32:52,657 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R2\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:32:52,658 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:32:52,658 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:32:52,663 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R3\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:32:52,664 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:32:52,718 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:32:52,718 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:34:01,710 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 13:34:12,859 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R3\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:34:12,860 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:34:13,033 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R1\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:34:13,033 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:34:13,359 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R2\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:34:13,359 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:34:13,391 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'napalm_ping' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_napalm/plugins/tasks/napalm_ping.py", line 37, in napalm_ping
+    result = device.ping(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 3339, in ping
+    output = self._send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/napalm/ios/ios.py", line 206, in _send_command
+    output = self.device.send_command(command)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/utilities.py", line 592, in wrapper_decorator
+    return func(self, *args, **kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/netmiko/base_connection.py", line 1721, in send_command
+    raise ReadTimeout(msg)
+netmiko.exceptions.ReadTimeout: 
+Pattern not detected: 'R4\\#' in output.
+
+Things you might try to fix this:
+1. Explicitly set your pattern using the expect_string argument.
+2. Increase the read_timeout to a larger value.
+
+You can also look at the Netmiko session_log or debug log for more information.
+
+
+
+2022-08-27 13:34:13,391 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'ping_test' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook16.py", line 8, in ping_test
+    task.run(task=napalm_ping, dest="77.77.77.77")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: napalm_ping (failed)
+
+
+2022-08-27 13:34:56,706 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 13:36:20,903 -  nornir.core -     INFO -        run() - Running task 'ping_test' with args {} on 4 hosts
+2022-08-27 15:37:24,299 -  nornir.core -     INFO -        run() - Running task 'push_show_commands' with args {} on 4 hosts
+2022-08-27 15:37:25,854 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:37:25,863 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:37:25,866 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:37:29,600 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 302, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2022-08-27 15:37:29,601 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:38:33,608 -  nornir.core -     INFO -        run() - Running task 'push_show_commands' with args {} on 4 hosts
+2022-08-27 15:38:38,847 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 302, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2022-08-27 15:38:38,848 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:39:44,936 -  nornir.core -     INFO -        run() - Running task 'push_show_commands' with args {} on 4 hosts
+2022-08-27 15:39:50,190 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 302, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2022-08-27 15:39:50,190 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:40:50,434 -  nornir.core -     INFO -        run() - Running task 'push_show_commands' with args {} on 4 hosts
+2022-08-27 15:40:51,952 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:40:52,343 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:40:52,350 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:40:55,676 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 302, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2022-08-27 15:40:55,676 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'push_show_commands' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook1.py", line 12, in push_show_commands
+    task.run(task=send_command, command=cmd)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-08-27 15:45:37,761 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 4 hosts
+2022-08-27 15:45:40,190 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 630, in send_configs_from_file
+    return self.send_configs(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 514, in send_configs
+    self.acquire_priv(desired_priv=resolved_privilege_level)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 173, in acquire_priv
+    raise ScrapliPrivilegeError(msg)
+scrapli.exceptions.ScrapliPrivilegeError: Failed to acquire requested privilege level configuration
+
+2022-08-27 15:45:40,191 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:45:40,205 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 630, in send_configs_from_file
+    return self.send_configs(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 514, in send_configs
+    self.acquire_priv(desired_priv=resolved_privilege_level)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 173, in acquire_priv
+    raise ScrapliPrivilegeError(msg)
+scrapli.exceptions.ScrapliPrivilegeError: Failed to acquire requested privilege level configuration
+
+2022-08-27 15:45:40,206 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:45:40,362 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 630, in send_configs_from_file
+    return self.send_configs(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 514, in send_configs
+    self.acquire_priv(desired_priv=resolved_privilege_level)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/network/sync_driver.py", line 173, in acquire_priv
+    raise ScrapliPrivilegeError(msg)
+scrapli.exceptions.ScrapliPrivilegeError: Failed to acquire requested privilege level configuration
+
+2022-08-27 15:45:40,362 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:45:43,076 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 58, in send_configs_from_file
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 105, in open
+    connection.open()
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/driver/base/sync_driver.py", line 88, in open
+    self.channel.channel_authenticate_ssh(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 216, in decorate
+    return _multiprocessing_timeout(
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in _multiprocessing_timeout
+    return future.result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/scrapli/channel/sync_channel.py", line 302, in channel_authenticate_ssh
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: password prompt seen more than once, assuming auth failed
+
+2022-08-27 15:45:43,077 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:47:31,738 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 4 hosts
+2022-08-27 15:47:33,648 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:47:33,795 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:47:33,928 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:47:33,933 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'push_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "runbook2.py", line 9, in push_configs
+    task.run(task=send_configs_from_file, file="testconfigs.txt")
+  File "/root/Nornir-Automation/.venv/lib/python3.8/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-08-27 15:50:38,648 -  nornir.core -     INFO -        run() - Running task 'push_show_commands' with args {} on 4 hosts
+2022-08-27 15:51:12,478 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 4 hosts
+2022-08-27 16:12:42,294 -  nornir.core -     INFO -        run() - Running task 'commit_flash' with args {} on 4 hosts
+2022-08-27 16:22:39,609 -  nornir.core -     INFO -        run() - Running task 'push_configs' with args {} on 4 hosts
+2022-08-27 16:29:01,816 -  nornir.core -     INFO -        run() - Running task 'rollin_rollin_rollin' with args {} on 4 hosts

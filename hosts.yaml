@@ -1,0 +1,24 @@
+---
+
+R1:
+    hostname: "10.0.0.241"
+    groups:
+        - cisco_group
+    data:
+        ntp_server: "1.2.3.4"
+
+R2:
+    hostname: "10.0.0.242"
+    groups: 
+        - cisco_group 
+
+R3:
+    hostname: "10.0.0.243"
+    groups:
+        - cisco_group   
+
+R4:
+    hostname: "10.0.0.244"
+    groups:
+        - cisco_group
+
