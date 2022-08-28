@@ -934,3 +934,11 @@ nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
 
 2022-08-27 18:19:44,953 -  nornir.core -     INFO -        run() - Running task 'pull_show_run' with args {} on 4 hosts
 2022-08-27 18:20:38,520 -  nornir.core -     INFO -        run() - Running task 'pull_show_run' with args {} on 4 hosts
+2022-08-28 15:23:22,946 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 15:48:56,374 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 15:49:07,989 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 15:53:16,097 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 16:01:42,818 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 16:06:43,498 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 16:11:48,236 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts
+2022-08-28 16:12:32,946 -  nornir.core -     INFO -        run() - Running task 'pull_structured_data' with args {} on 4 hosts

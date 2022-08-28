@@ -4,8 +4,7 @@ R1:
     hostname: "10.0.0.241"
     groups:
         - cisco_group
-    data:
-        ntp_server: "1.2.3.4"
+
 
 R2:
     hostname: "10.0.0.242"
